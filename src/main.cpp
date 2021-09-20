@@ -11,6 +11,7 @@
 #define MAX_I2C_DEVICES 20
 
 #include "tests.h"
+#include "test_sds.h"
 
 void testI2C() {
     byte scanResults[MAX_I2C_DEVICES];
