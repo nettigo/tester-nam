@@ -84,7 +84,7 @@ bool SDS_checksum_valid(const uint8_t (&data)[8]) {
 
 void byteReceived(int cnt) {
 //    Serial.print(F("SDS - received: "));
-    Serial.println(cnt);
+//    Serial.println(cnt);
     if (cnt>=SDS_SERIAL_BUFF_SIZE) {
         Serial.println(F("SDS buffer full!"));
     }
