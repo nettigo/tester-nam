@@ -121,8 +121,8 @@ void setup() {
     Serial.begin(115200);
     pinMode(RST_PIN, OUTPUT);
     digitalWrite(RST_PIN, HIGH);
-    Wire.begin(10,9);
-    Serial.println("9,10 scan...");
+//    Wire.begin(10,9);
+//    Serial.println("9,10 scan...");
     for (uint8_t addr = 0x07; addr <= 0x7F; addr++) {
         // Address the device
         Wire.beginTransmission(addr);
@@ -138,16 +138,16 @@ void setup() {
     Wire.setClock(100000); // Force bus speed 100 Khz
     delay(1000 * 2);
     doTests();
-    Wire.begin(10,9);
-
-    char_lcd.clear();
-    char_lcd.print(responses[0]);
-    char_lcd.setCursor(10,0);
-    char_lcd.print(responses[1]);
-    char_lcd.setCursor(0,1);
-    char_lcd.print(responses[2]);
-    char_lcd.setCursor(10,1);
-    char_lcd.print(responses[3]);
+//    Wire.begin(10,9);
+//
+//    char_lcd.clear();
+//    char_lcd.print(responses[0]);
+//    char_lcd.setCursor(10,0);
+//    char_lcd.print(responses[1]);
+//    char_lcd.setCursor(0,1);
+//    char_lcd.print(responses[2]);
+//    char_lcd.setCursor(10,1);
+//    char_lcd.print(responses[3]);
     while (true) { yield(); };
 }
 
